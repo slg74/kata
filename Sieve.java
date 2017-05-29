@@ -3,7 +3,7 @@ public class Sieve {
 	public static int N = 10000;
 	public static int NPRIMES = 1229;
 
-	public static int sieveFunction() {
+	public static int sieveFunction(boolean print) {
 		int i;
 		int j;
 		int[] a = new int[N+1]; 
@@ -22,13 +22,16 @@ public class Sieve {
 		for (i=1; i<=N; i++) {
 			if (a[i] == 1) {
 				total += 1;
+				if (print == true) {
+					System.out.printf(" %d ", i); 
+				}
 			}
 		}
 		return total;
 	}
 
         public static boolean testSieve() {
-		if (sieveFunction() == NPRIMES) {
+		if (sieveFunction(false) == NPRIMES) {
 			return true;
 		}
 		return false;
@@ -36,7 +39,7 @@ public class Sieve {
 
 	public static void main(String[] args) {
 
-		int ret = sieveFunction(); 
+		int ret = sieveFunction(true); 
 
 		boolean val = testSieve(); 
 		if (val == true) {
