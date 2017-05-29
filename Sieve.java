@@ -22,7 +22,6 @@ public class Sieve {
 		for (i=1; i<=N; i++) {
 			if (a[i] == 1) {
 				total += 1;
-				System.out.printf(" %d ", i); 
 			}
 		}
 		return total;
