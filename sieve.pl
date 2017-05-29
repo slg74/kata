@@ -42,15 +42,13 @@ sub test_sieve {
 	return 0;
 }
 
-my $test_val = sieve(my $printme = 0); 
-if (test_sieve()) {
-	print "sieve function OK   : got $test_val\n"; 
-} else {
-	print "sieve function FAIL : got $test_val\n"; 
+sub main() {
+	my $test_val = sieve(my $printme = 0); 
+	if (test_sieve()) {
+		print "sieve function OK   : got $test_val\n"; 
+	} else {
+		print "sieve function FAIL : got $test_val\n"; 
+	}
 }
-	
-		
 
-
-
-
+main(); 
